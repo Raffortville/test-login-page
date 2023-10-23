@@ -6,33 +6,54 @@ import { styled } from '../../ui/config';
 
 export const LoginInPage = () => {
 	const Container = styled('div', {
-		width: '100%',
-		height: '100vh',
+		minHeight: '100vh',
+		minWidth: '100%',
 		display: 'flex',
+		flexDirection: 'column',
+
+		'@sm': {
+			flexDirection: 'initial',
+		},
 	});
 
 	const SectionStart = styled('section', {
-		width: '505px',
-		height: '100%',
+		width: '100%',
+		padding: '16px 8px',
 		backgroundColor: '$primary',
-		padding: '32px 16px',
+
+		'@md': {
+			width: '615px',
+		},
+
+		'@xs': {
+			padding: '32px 16px',
+		},
 	});
 
 	const SectionEnd = styled('section', {
-		height: '100%',
+		width: '100%',
 		flex: 'auto',
 		backgroundColor: '$gray_light',
 		padding: 32,
-		boxShadow: 'inset 1px -1px 5px -1px rgba(66, 68, 90, 1)',
+		boxShadow: 'inset 0px 1px 2px -1px #5903E5',
+
+		'@sm': {
+			boxShadow: 'inset 1px 0px 2px -1px #5903E5',
+		},
 	});
 
 	const FormContainer = styled('div', {
-		width: '375px',
+		width: '100%',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		gap: 16,
-		margin: '64px auto auto',
+		margin: '16px auto auto',
+
+		'@sm': {
+			width: '375px',
+			margin: '64px auto auto',
+		},
 	});
 
 	return (

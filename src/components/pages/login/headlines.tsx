@@ -7,6 +7,11 @@ const Container = styled('div', {
 	alignItems: 'center',
 	gap: 16,
 	marginTop: '174px',
+	margin: '32px 0',
+
+	'@sm': {
+		marginTop: '174px',
+	},
 });
 
 export const HeadlinesLogin = () => {

@@ -12,16 +12,18 @@ export const globalStyles = globalCss({
 		display: 'block',
 	},
 	body: {
+		height: '100%',
+		width: '100%',
 		color: colors.black_light,
 	},
 });
 
 export const { styled, css, keyframes } = createStitches({
 	media: {
-		xs: '(max-width: 576px)',
-		sm: '(max-width: 768px)',
-		md: '(max-width: 992px)',
-		lg: '(max-width: 1200px)',
+		xs: '(min-width: 576px)',
+		sm: '(min-width: 768px)',
+		md: '(min-width: 992px)',
+		lg: '(min-width: 1200px)',
 		xlg: '(min-width: 1201px)',
 	},
 	theme: {
