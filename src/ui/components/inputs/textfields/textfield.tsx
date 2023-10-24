@@ -25,6 +25,7 @@ interface ITextfieldProps {
 	required?: boolean;
 	width?: string | number | undefined;
 	height?: string | number | undefined;
+	autoComplete?: string | undefined;
 	css?: {
 		content?: CSS;
 		input?: CSS;
@@ -48,6 +49,7 @@ const Textfield: React.FC<ITextfieldProps> = ({
 	required,
 	width,
 	height,
+	autoComplete,
 	css,
 	leftIconElement,
 }) => {
@@ -79,6 +81,7 @@ const Textfield: React.FC<ITextfieldProps> = ({
 						setIsOnFocus(false);
 					}}
 					placeholder={placeholder}
+					autoComplete={autoComplete}
 					css={css?.input}
 				/>
 			</InputContent>

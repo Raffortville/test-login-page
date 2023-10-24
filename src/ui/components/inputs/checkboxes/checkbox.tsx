@@ -4,6 +4,7 @@ import { Container, Required, Input, Label } from './checkbox-styles';
 
 interface ICheckboxProps {
 	label?: string;
+	checked?: boolean | undefined;
 	defaultChecked?: boolean | undefined;
 	onCheck?: (checked: boolean) => void;
 	name?: string | undefined;
@@ -18,6 +19,7 @@ interface ICheckboxProps {
 
 const Checkbox: React.FC<ICheckboxProps> = ({
 	label,
+	checked,
 	defaultChecked,
 	onCheck,
 	name,
@@ -37,6 +39,7 @@ const Checkbox: React.FC<ICheckboxProps> = ({
 				type='checkbox'
 				id={id}
 				name={name}
+				checked={checked}
 				defaultChecked={defaultChecked}
 				onChange={(e) => {
 					onCheck?.(e.target.checked);
