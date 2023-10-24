@@ -6,7 +6,7 @@ const Container = styled('div', {
 	fontSize: 'small',
 });
 
-const Caption = styled('caption', {
+const Caption = styled('div', {
 	height: 20,
 	display: 'flex',
 	gap: 8,

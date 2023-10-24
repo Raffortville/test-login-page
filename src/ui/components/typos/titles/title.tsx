@@ -13,12 +13,15 @@ interface ITitleProps {
 	css?: { title?: CSS };
 }
 
-const Title: React.FC<ITitleProps> = ({ children, component, color, css }) => {
+export const Title: React.FC<ITitleProps> = ({
+	children,
+	component,
+	color,
+	css,
+}) => {
 	return (
 		<Head as={component} css={{ color, ...{ ...css?.title } }}>
 			{children}
 		</Head>
 	);
 };
-
-export default Title;

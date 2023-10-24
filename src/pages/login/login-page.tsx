@@ -1,7 +1,7 @@
 import { FormLoginPage, HeadlinesLogin } from '../../components/pages/login';
-import Logo from '../../ui/components/logos/logo';
-import Separator from '../../ui/components/separators/separator';
-import Title from '../../ui/components/typos/titles/title';
+import { Logo } from '../../ui/components/logos';
+import { Separator } from '../../ui/components/separators';
+import { Title } from '../../ui/components/typos/titles';
 import { styled } from '../../ui/config';
 
 export const LoginInPage = () => {

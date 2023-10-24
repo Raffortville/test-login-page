@@ -17,7 +17,7 @@ interface ICheckboxProps {
 	};
 }
 
-const Checkbox: React.FC<ICheckboxProps> = ({
+export const Checkbox: React.FC<ICheckboxProps> = ({
 	label,
 	checked,
 	defaultChecked,
@@ -50,5 +50,3 @@ const Checkbox: React.FC<ICheckboxProps> = ({
 		</Container>
 	);
 };
-
-export default Checkbox;

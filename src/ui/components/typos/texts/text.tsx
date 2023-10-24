@@ -36,7 +36,7 @@ interface ITextProps {
 	clickable?: boolean;
 }
 
-const Text: React.FC<ITextProps> = ({
+export const Text: React.FC<ITextProps> = ({
 	children,
 	component = 'p',
 	css,
@@ -52,5 +52,3 @@ const Text: React.FC<ITextProps> = ({
 		</Paragraph>
 	);
 };
-
-export default Text;

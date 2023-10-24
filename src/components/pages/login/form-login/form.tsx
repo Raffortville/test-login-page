@@ -1,15 +1,15 @@
 import { AiOutlineMail } from 'react-icons/ai';
-import Textfield from '../../../ui/components/inputs/textfields/textfield';
-import { styled } from '../../../ui/config';
+import { Textfield } from '../../../../ui/components/inputs/textfields';
+import { styled } from '../../../../ui/config';
 import { RiLockPasswordLine } from 'react-icons/ri';
-import Button from '../../../ui/components/buttons/button';
-import Checkbox from '../../../ui/components/inputs/checkboxes/checkbox';
-import Separator from '../../../ui/components/separators/separator';
-import Text from '../../../ui/components/typos/texts/text';
-import { ChangeEvent, HTMLInputTypeAttribute, useState } from 'react';
-import { checkIsEmailValid, checkIsPasswordValid } from '../../../utils/';
-import { Alert } from '../../../ui/components/alerts';
-import { useAlert } from '../../../ui/components/alerts/useAlert';
+import { Button } from '../../../../ui/components/buttons';
+import { Checkbox } from '../../../../ui/components/inputs/checkboxes';
+import { Separator } from '../../../../ui/components/separators';
+import { Text } from '../../../../ui/components/typos/texts';
+import { ChangeEvent, useState } from 'react';
+import { Alert } from '../../../../ui/components/alerts';
+import { useAlert } from '../../../../ui/components/alerts/useAlert';
+import { getFormErrors } from './form-helpers';
 
 const Container = styled('div', {
 	width: '100%',
@@ -37,7 +37,7 @@ interface IValues {
 	email: string | undefined;
 	password: string | undefined;
 }
-interface IErrors {
+export interface IErrors {
 	email?: string | undefined;
 	password?: string | undefined;
 }
@@ -47,33 +47,8 @@ export const FormLoginPage = () => {
 	const [values, setValues] = useState<IValues>(initialValues);
 	const [errors, setErrors] = useState<IErrors | null>(null);
 	const [isValid, setIsValid] = useState<boolean>(false);
+
 	const { isPublish, triggerPublish } = useAlert();
-
-	const getFormErrors = (
-		value: string | undefined,
-		type: HTMLInputTypeAttribute
-	): IErrors | null => {
-		let errors: IErrors | null = null;
-		if (type === 'password') {
-			const { type, message } = checkIsPasswordValid({
-				value,
-				options: { min_length: 7, uppercase_min: 1 },
-			});
-			errors = {
-				...(errors ?? {}),
-				password: type === 'error' ? message : undefined,
-			};
-		}
-
-		if (type === 'email') {
-			const { type, message } = checkIsEmailValid(value);
-			errors = {
-				...(errors ?? {}),
-				email: type === 'error' ? message : undefined,
-			};
-		}
-		return errors;
-	};
 
 	const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
 		const { value, name, type } = e.target;

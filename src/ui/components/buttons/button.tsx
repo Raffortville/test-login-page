@@ -11,7 +11,7 @@ interface IButtonProps {
 	};
 }
 
-const Button: React.FC<IButtonProps> = ({
+export const Button: React.FC<IButtonProps> = ({
 	onClick,
 	children,
 	outline,
@@ -28,5 +28,3 @@ const Button: React.FC<IButtonProps> = ({
 		</Btn>
 	);
 };
-
-export default Button;

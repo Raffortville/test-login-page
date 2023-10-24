@@ -1,4 +1,4 @@
-import Title from '../../../ui/components/typos/titles/title';
+import { Title } from '../../../ui/components/typos/titles';
 import { styled } from '../../../ui/config';
 
 const Container = styled('div', {

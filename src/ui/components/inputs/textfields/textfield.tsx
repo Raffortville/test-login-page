@@ -9,7 +9,7 @@ import {
 	Label,
 	LeftContainer,
 } from './textfield-styles';
-import Text from '../../typos/texts/text';
+import { Text } from '../../typos/texts';
 
 interface ITextfieldProps {
 	type?: React.HTMLInputTypeAttribute;
@@ -35,7 +35,7 @@ interface ITextfieldProps {
 	leftIconElement?: React.ReactNode;
 }
 
-const Textfield: React.FC<ITextfieldProps> = ({
+export const Textfield: React.FC<ITextfieldProps> = ({
 	type,
 	value,
 	defaultValue,
@@ -94,5 +94,3 @@ const Textfield: React.FC<ITextfieldProps> = ({
 		</Container>
 	);
 };
-
-export default Textfield;

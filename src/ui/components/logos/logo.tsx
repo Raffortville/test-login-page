@@ -9,7 +9,7 @@ interface ILogoProps {
 	height?: string | number | undefined;
 }
 
-const Logo: React.FC<ILogoProps> = ({ width, height }) => {
+export const Logo: React.FC<ILogoProps> = ({ width, height }) => {
 	return (
 		<Image
 			width={width}
@@ -18,5 +18,3 @@ const Logo: React.FC<ILogoProps> = ({ width, height }) => {
 		/>
 	);
 };
-
-export default Logo;

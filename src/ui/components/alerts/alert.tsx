@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { CgDanger } from 'react-icons/cg';
 import { AiOutlineCheckCircle } from 'react-icons/ai';
-import Text from '../typos/texts/text';
+import { Text } from '../typos/texts';
 import { AlertBox } from './alert-styles';
 
 type AlertType = 'danger' | 'success';

@@ -29,7 +29,7 @@ interface ISeparatorProps {
 		separator?: CSS;
 	};
 }
-const Separator: React.FC<ISeparatorProps> = ({
+export const Separator: React.FC<ISeparatorProps> = ({
 	direction = 'horizontal',
 	css,
 	color,
@@ -42,5 +42,3 @@ const Separator: React.FC<ISeparatorProps> = ({
 		/>
 	);
 };
-
-export default Separator;
